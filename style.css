@@ -31,9 +31,10 @@ a:hover {
 }
 
 .nav {
+    position: fixed;
     margin: 0 auto;
     width: 100%;
-    background: #23232e;
+    transition: 0.3s;
 }
 
 nav {
@@ -104,9 +105,7 @@ nav {
 }
 
 .content__banner {
-    display: flex;
-    
-    margin: 0 auto;
+    background: url('/img/bg-test.jpg');
 }
 
 .content__flexbox {
@@ -121,13 +120,14 @@ nav {
     flex: 1 1 200px;
     margin: 10px;
     max-width: 300px;
-    transition: all  0.3s ease-in-out;
+    transition: all  0.2s ease-in-out;
 }
 
 .content__box:hover {
     border: lightgrey 3px solid;
-    color: darkslateblue;
-    font-weight: 600;
+    background-color: rgb(19, 18, 18);
+    color: whitesmoke;
+    cursor: pointer;
 }
 
 .content__box p {
@@ -206,17 +206,16 @@ footer {
 
 
 @media (max-width: 800px) {
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
     body {
         overflow-x: hidden;
     }
+    .nav {
+        position: relative;
+        background: #23232e;
+    }
     .nav-list {
         position: absolute;
-        top: 8vh;
+        top: 100px;
         right: 0;
         width: 50vw;
         height: 92vh;
@@ -225,6 +224,10 @@ footer {
         align-items: center;
         justify-content: space-around;
         transform: translateX(100%);
+    }
+
+    .container {
+        min-width: 100%;
     }
 
     .nav-list li {
@@ -247,6 +250,12 @@ footer {
 
     .footer-top p {
         text-align: center;
+    }
+
+    .developed-by {
+        text-align: center;
+        font-size: 6px;
+        padding: 0 5px 0 5px;
     }
 }
 
