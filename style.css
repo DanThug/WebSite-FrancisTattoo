@@ -206,18 +206,16 @@ footer {
 
 
 @media (max-width: 800px) {
-    body {
-        overflow-x: hidden;
-    }
     .nav {
-        position: relative;
+        position: fixed;
         background: #23232e;
+        overflow-y: hidden;
     }
     .nav-list {
-        position: absolute;
+        position: fixed;
         top: 100px;
         right: 0;
-        width: 50vw;
+        width: 100vw;
         height: 92vh;
         background: #23232e;
         flex-direction: column;
@@ -227,8 +225,11 @@ footer {
     }
 
     .container {
-        min-width: 100%;
         overflow: hidden;
+    }
+
+    .content__banner {
+        margin-top: 100px;
     }
 
     .nav-list li {
