@@ -1,6 +1,7 @@
 
 const mobileMenu = document.querySelector('[data-js="mobile-menu"]');
-const socialMediaLinks = document.querySelector('[data-js="social-media-links"]');
+const socialMedia = document.querySelectorAll('[data-social-media]');
+const socialMediaLinks = document.querySelectorAll('[data-social-media-links]');
 
 const toggleMenuIcon = () => {
     const navList = document.querySelector('[data-js="nav-list"]');
@@ -15,7 +16,7 @@ const toggleMenuIcon = () => {
 const changeBackground = () => {
     const position = window.pageYOffset;
     const nav = document.querySelector('.nav');
-    const setColor = position >= 200 ? '#23232e' : '' ;
+    const setColor = position >= 100 ? '#23232e' : '' ;
 
     nav.style.backgroundColor = setColor;
 }
@@ -23,9 +24,13 @@ const changeBackground = () => {
 mobileMenu.addEventListener('click', toggleMenuIcon);
 document.addEventListener('scroll', changeBackground)
 
-const accordionBtns = document.querySelectorAll('.accordionBtn');
 
-/* accordionBtns.forEach(btn => btn.addEventListener('click', () => {
-    btn.classList.toggle('active')
-    document.querySelector('.panel').style.display = 'block'
-})) */
+socialMedia.forEach((media, index) => {
+    media.addEventListener('mouseenter', () => {  
+        socialMediaLinks[index].classList.add('active');
+    });
+
+    media.addEventListener('mouseleave', () => {
+        socialMediaLinks[index].classList.remove('active');
+    });
+});
