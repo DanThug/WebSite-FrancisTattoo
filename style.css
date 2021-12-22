@@ -132,6 +132,7 @@ nav {
     flex-flow: column wrap;
     display: flex;
     align-items: center;
+    background: url('/img/bg-banner.png') center center no-repeat;
 }
 
 .banner-title {
@@ -363,6 +364,7 @@ footer {
         display: flex;
         flex-flow: column wrap;
         align-items: center;
+        background: url('/img/bg-banner-mobile.png') center center no-repeat;
     }
     
     .banner-title {
