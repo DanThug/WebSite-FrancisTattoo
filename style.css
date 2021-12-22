@@ -271,6 +271,7 @@ footer {
     width: 80%;
     margin: 0 auto;
     text-align: center;
+    padding-bottom: 20px;
 }
 
 .contact-icon, .contact-body {
@@ -280,8 +281,9 @@ footer {
 .contact-header {
     width: 100%;
     padding: 25px 0 25px 0;
-    background: rgb(245, 245, 245);
-    border-radius: 8px;
+    background: #fede47;
+    border-radius: 0 0 8px 8px;
+    font-size: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -296,8 +298,37 @@ footer {
 .contact-body {
     font-family: 'Didact Gothic', sans-serif;
     letter-spacing: .2rm;
+    font-size: 20px;
 }
 
+.contact-body a:hover {
+    color: #fede47;
+}
+
+.content__about {
+    justify-content: center;
+    display: flex;
+}
+
+.about-title {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.about {
+    width: 50%;
+    color: white;
+    display: flex;
+    flex-flow: column wrap;
+    font-family: 'Didact Gothic', sans-serif;
+    text-align: justify;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.about p {
+    font-size: 20px;
+}
 
 @media (max-width: 800px) {
     .nav {
@@ -409,8 +440,12 @@ footer {
 
     .contact-header {
         border-radius: 0;
-        background: whitesmoke;
+        background: #fede47;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .about {
+        width: 90%;
     }
 }
 
