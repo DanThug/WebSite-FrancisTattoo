@@ -34,7 +34,11 @@
         <section>
             <div class="content">
                 <div class="content__banner">
-                    <img src="/img/banner1.jpg" alt="">
+                    <div class="banner-text">
+                        <div class="banner-title">Francis</div>
+                        <div class="banner-subtitle">Tattoo</div>
+                        <p>Realismo - Cobertura - FreeHand</p>
+                    </div>
                 </div>
     
                 <div class="content__flexbox">
@@ -151,5 +155,16 @@
     </div>
 
     <script src="/app.js"></script>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelectorAll(".content__box"), {
+            max: 25,
+            speed: 400,
+            glare: true
+        });
+        
+        //It also supports NodeList
+        VanillaTilt.init(document.querySelectorAll(".content__box"));
+    </script>
 </body>
 </html>
