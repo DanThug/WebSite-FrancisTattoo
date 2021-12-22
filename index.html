@@ -157,14 +157,23 @@
     <script src="/app.js"></script>
     <script type="text/javascript" src="vanilla-tilt.js"></script>
     <script type="text/javascript">
-        VanillaTilt.init(document.querySelectorAll(".content__box"), {
-            max: 25,
-            speed: 400,
-            glare: true
-        });
-        
-        //It also supports NodeList
-        VanillaTilt.init(document.querySelectorAll(".content__box"));
+        const startCardEffect = () => {
+            const cardBoxes = document.querySelectorAll(".content__box");
+            const isLessThan800 = window.window.innerWidth <= 800;
+            const effectOptions = {
+                max: 25,
+                speed: 400,
+                glare: true
+            }
+
+            if (isLessThan800) {
+                return;
+            }
+
+            VanillaTilt.init(cardBoxes, effectOptions);
+        }
+
+        startCardEffect();
     </script>
 </body>
 </html>

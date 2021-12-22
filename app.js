@@ -21,9 +21,10 @@ const changeBackground = () => {
     nav.style.backgroundColor = setColor;
 }
 
+
+// Event Listeners
 mobileMenu.addEventListener('click', toggleMenuIcon);
 document.addEventListener('scroll', changeBackground)
-
 
 socialMedia.forEach((media, index) => {
     media.addEventListener('mouseenter', () => {  
